@@ -30,17 +30,14 @@ public class App {
     int odd = 0;
     int even = 0;
     for (int i = a; i <= b; i++) {
-      if (i % 2 != 0) {
-        odd = new Calculate().sum(odd, i);
-      } else {
-        even = new Calculate().sum(even, i);
-      }
-
+      sum = new Calculate().sum(sum, i);
+      len++;
     }
 
-    return "Sum of odd of " + a + " to " + b + " is " + odd + "." + "Sum of even of " + a + " to " + b + " is " + even
-        + ".";
+    return "Sum of " + a + " to " + b + " is " + sum + ". Average is " + ave + ".";
   }
+
+
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());

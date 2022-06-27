@@ -26,9 +26,8 @@ public class AppTest {
   }
 
   @Test
-  public void testGetOddandEvenMessage() {
+  public void testGetAtoBMessage() {
     App classUnderTest = new App();
-    assertEquals("Sum of odd of 1 to 10 is 25.Sum of even of 1 to 10 is 30.",
-        classUnderTest.getOddandEvenMessage(1, 10));
+    assertEquals("Sum of 1 to 10 is 55. Average is 5.5.", classUnderTest.getAtoBMessage(1, 10));
   }
 }

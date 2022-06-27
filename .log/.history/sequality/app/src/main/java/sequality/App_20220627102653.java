@@ -22,24 +22,8 @@ public class App {
       len++;
     }
 
-    float ave = (float) sum / len;
+    float ave = (float) sum / 2;
     return "Sum of " + a + " to " + b + " is " + sum + ". Average is " + ave + ".";
-  }
-
-  public String getOddandEvenMessage(int a, int b) {
-    int odd = 0;
-    int even = 0;
-    for (int i = a; i <= b; i++) {
-      if (i % 2 != 0) {
-        odd = new Calculate().sum(odd, i);
-      } else {
-        even = new Calculate().sum(even, i);
-      }
-
-    }
-
-    return "Sum of odd of " + a + " to " + b + " is " + odd + "." + "Sum of even of " + a + " to " + b + " is " + even
-        + ".";
   }
 
   public static void main(String[] args) {
@@ -47,6 +31,5 @@ public class App {
 
     System.out.println(new App().getAddMessage(2, 3));
     System.out.println(new App().getAtoBMessage(1, 10));
-    System.out.println(new App().getOddandEvenMessage(1, 10));
   }
 }

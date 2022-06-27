@@ -16,37 +16,18 @@ public class App {
 
   public String getAtoBMessage(int a, int b) {
     int sum = 0;
-    int len = 0;
-    for (int i = a; i <= b; i++) {
-      sum = new Calculate().sum(sum, i);
-      len++;
+    for (int i=a, i <= b; i++){
+      sum
     }
-
-    float ave = (float) sum / len;
+    int sum = new Calculate().sum(a, b);
+    float ave = (float) sum / 2;
     return "Sum of " + a + " to " + b + " is " + sum + ". Average is " + ave + ".";
-  }
-
-  public String getOddandEvenMessage(int a, int b) {
-    int odd = 0;
-    int even = 0;
-    for (int i = a; i <= b; i++) {
-      if (i % 2 != 0) {
-        odd = new Calculate().sum(odd, i);
-      } else {
-        even = new Calculate().sum(even, i);
-      }
-
-    }
-
-    return "Sum of odd of " + a + " to " + b + " is " + odd + "." + "Sum of even of " + a + " to " + b + " is " + even
-        + ".";
   }
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
 
     System.out.println(new App().getAddMessage(2, 3));
-    System.out.println(new App().getAtoBMessage(1, 10));
-    System.out.println(new App().getOddandEvenMessage(1, 10));
+    System.out.println(new App().getAtoBMessage(10, 55));
   }
 }
